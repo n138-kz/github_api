@@ -29,7 +29,10 @@ token=''
 | Yes | read:repo_hook  | Read repository hooks |
 
 ```sh
-for i in $(curl 'https://api.github.com/users/n138-kz/repos?sort=name&per_page=1000' | jq -r .[].url); do
+for i in $(\
+    curl 'https://api.github.com/users/n138-kz/repos?sort=name&per_page=1000'\
+    | jq -r .[].url\
+); do
     curl -L \
         -H "Accept: application/vnd.github+json" \
         -H "Authorization: Bearer ${token}" \
@@ -47,7 +50,10 @@ done
 | Yes | read:repo_hook  | Read repository hooks |
 
 ```sh
-for i in $(curl 'https://api.github.com/users/n138-kz/repos?sort=name&per_page=1000' | jq -r .[].url); do
+for i in $(\
+    curl 'https://api.github.com/users/n138-kz/repos?sort=name&per_page=1000'\
+    | jq -r .[].url\
+); do
     curl -L \
         -X POST \
         -H "Accept: application/vnd.github+json" \

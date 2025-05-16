@@ -30,11 +30,11 @@ token=''
 
 ```sh
 for i in $(curl 'https://api.github.com/users/n138-kz/repos?sort=name&per_page=1000' | jq -r .[].url); do
-curl -L \
-  -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer ${token}" \
-  -H "X-GitHub-Api-Version: 2022-11-28" \
-  ${i}/hooks
+    curl -L \
+        -H "Accept: application/vnd.github+json" \
+        -H "Authorization: Bearer ${token}" \
+        -H "X-GitHub-Api-Version: 2022-11-28" \
+        ${i}/hooks
 done
 ```
 
@@ -48,13 +48,13 @@ done
 
 ```sh
 for i in $(curl 'https://api.github.com/users/n138-kz/repos?sort=name&per_page=1000' | jq -r .[].url); do
-curl -L \
-  -X POST \
-  -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer ${token}" \
-  -H "X-GitHub-Api-Version: 2022-11-28" \
-  ${i}/hooks \
-  -d '{"name":"web","active":true,"events":["*"],"config":{"url":"https://discord.com/api/webhooks/HOGE/FOO/github","content_type":"json","insecure_ssl":"0"}}'
+    curl -L \
+        -X POST \
+        -H "Accept: application/vnd.github+json" \
+        -H "Authorization: Bearer ${token}" \
+        -H "X-GitHub-Api-Version: 2022-11-28" \
+        ${i}/hooks \
+        -d '{"name":"web","active":true,"events":["*"],"config":{"url":"https://discord.com/api/webhooks/HOGE/FOO/github","content_type":"json","insecure_ssl":"0"}}'
 done
 ```
 
@@ -68,11 +68,11 @@ done
 
 ```sh
 for i in $(curl 'https://api.github.com/users/n138-kz/repos?sort=name&per_page=1000' | jq -r .[].url); do \
-curl -L \
-  -X DELETE \
-  -H "Accept: application/vnd.github+json" \
-  -H "Authorization: Bearer ${token}" \
-  -H "X-GitHub-Api-Version: 2022-11-28" \
-  ${i}
+    curl -L \
+        -X DELETE \
+        -H "Accept: application/vnd.github+json" \
+        -H "Authorization: Bearer ${token}" \
+        -H "X-GitHub-Api-Version: 2022-11-28" \
+        ${i}
 done
 ```

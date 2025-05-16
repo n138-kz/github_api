@@ -4,14 +4,6 @@
 
 [Issue token](https://github.com/settings/tokens)
 
-### Permmision
-
-| 必須 | 権限名 | 備考 |
-|:-:|:-|:-|
-| 必要に応じて | admin:repo_hook | Full control of repository hooks |
-| 必要に応じて | write:repo_hook | Write repository hooks |
-| 必須 | read:repo_hook  | Read repository hooks |
-
 ```sh
 token=''
 ```
@@ -24,7 +16,13 @@ token=''
 
 | 必須 | 権限名 | 備考 |
 |:-:|:-|:-|
-| No | admin:repo_hook | Full control of repository hooks |
+| Yes | repo:status | Read repository hooks |
+| Yes | repo | Full control of private repositories |
+| Yes | repo:status | Access commit status |
+| Yes | repo_deployment | Access deployment status |
+| Yes | public_repo | Access public repositories |
+| Yes | repo:invite | Access repository invitations |
+| Yes | security_events | Read and write security events |
 | No | write:repo_hook | Write repository hooks |
 | Yes | read:repo_hook  | Read repository hooks |
 
@@ -49,7 +47,13 @@ done
 
 | 必須 | 権限名 | 備考 |
 |:-:|:-|:-|
-| No | admin:repo_hook | Full control of repository hooks |
+| Yes | repo:status | Read repository hooks |
+| Yes | repo | Full control of private repositories |
+| Yes | repo:status | Access commit status |
+| Yes | repo_deployment | Access deployment status |
+| Yes | public_repo | Access public repositories |
+| Yes | repo:invite | Access repository invitations |
+| Yes | security_events | Read and write security events |
 | Yes | write:repo_hook | Write repository hooks |
 | Yes | read:repo_hook  | Read repository hooks |
 
@@ -76,7 +80,13 @@ done
 
 | 必須 | 権限名 | 備考 |
 |:-:|:-|:-|
-| No | admin:repo_hook | Full control of repository hooks |
+| Yes | repo:status | Read repository hooks |
+| Yes | repo | Full control of private repositories |
+| Yes | repo:status | Access commit status |
+| Yes | repo_deployment | Access deployment status |
+| Yes | public_repo | Access public repositories |
+| Yes | repo:invite | Access repository invitations |
+| Yes | security_events | Read and write security events |
 | Yes | write:repo_hook | Write repository hooks |
 | Yes | read:repo_hook  | Read repository hooks |
 

@@ -38,7 +38,7 @@ for i in $(curl 'https://api.github.com/users/n138-kz/repos?sort=name&per_page=1
 done
 ```
 
-### Create(set)
+### Create(add)
 
 | 必須 | 権限名 | 備考 |
 |:-:|:-|:-|
